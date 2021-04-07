@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>dialog tag</title>
+  <style>
+    .box {
+      width: 100%;
+      height: 600px;
+    }
+    #dialog {
+      width: 20%;
+      height: 200px;
+      border-radius: 8px;
+      border: 2px solid gray;
+      word-break:break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <figure>
+      <img src="." alt="asd">
+      <figcaption>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas qui molestias natus mollitia eius quidem officiis id rem animi odit, repudiandae sequi nam, quasi sapiente. Molestiae velit saepe vel mollitia!
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="." alt="asd">
+      <figcaption>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas qui molestias natus mollitia eius quidem officiis id rem animi odit, repudiandae sequi nam, quasi sapiente. Molestiae velit saepe vel mollitia!
+      </figcaption>
+    </figure>
+    <button class="popup">弹出</button>
+    <dialog id="dialog">
+      <div class="dialog-top">
+        <button class="dialog-close">&#10006</button>
+      </div>
+      <form action="">
+        <label>
+          <span>投投：</span>
+          <input type="text" name="tt" placeholder="none">
+        </label>
+      </form>
+    </dialog>
+  </div>
+  <script>
+    let button = document.querySelector('.popup')
+    let closeButton = document.querySelector('.dialog-close')
+    let dialog = document.getElementById('dialog')
+    button.addEventListener('click', () => {
+      dialog.showModal()
+    })
+    closeButton.addEventListener('click', () => {
+      dialog.close()
+    })
+  </script>
+</body>
+</html>
